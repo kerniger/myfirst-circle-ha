@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Esta conta myFirst Circle já está configurada.",
+      "reauth_successful": "A sessão myFirst Circle foi renovada com sucesso.",
+      "wrong_account": "Estas credenciais pertencem a outra conta myFirst Circle."
+    },
+    "error": {
+      "cannot_connect": "Não foi possível ligar ao myFirst Circle.",
+      "invalid_auth": "As credenciais do Circle foram rejeitadas.",
+      "no_devices": "Não foram encontrados relógios para esta conta.",
+      "unknown": "Resposta inesperada do myFirst Circle."
+    },
+    "step": {
+      "user": {
+        "data": {"phone": "Número de telefone", "password": "Palavra-passe"},
+        "data_description": {
+          "phone": "O número internacional usado na conta Circle, incluindo o indicativo do país.",
+          "password": "A palavra-passe da conta Circle. É utilizada uma vez para iniciar sessão e não é guardada pelo Home Assistant."
+        },
+        "description": "Inicie sessão diretamente com uma conta myFirst Circle. O Home Assistant guarda apenas a sessão renovável resultante, não o telefone nem a palavra-passe.",
+        "title": "Ligar myFirst Circle"
+      },
+      "reauth_confirm": {
+        "data": {"phone": "Número de telefone", "password": "Palavra-passe"},
+        "data_description": {
+          "phone": "O número internacional da conta Circle configurada, incluindo o indicativo do país.",
+          "password": "A palavra-passe da conta Circle. É utilizada uma vez para renovar a sessão e não é guardada pelo Home Assistant."
+        },
+        "description": "A sessão myFirst Circle expirou. Inicie sessão novamente com a mesma conta para a renovar.",
+        "title": "Renovar a sessão myFirst Circle"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "Bateria"}
+    }
+  }
+}

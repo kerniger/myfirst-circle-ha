@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "To konto myFirst Circle jest już skonfigurowane.",
+      "reauth_successful": "Sesja myFirst Circle została odnowiona.",
+      "wrong_account": "Te dane logowania należą do innego konta myFirst Circle."
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z myFirst Circle.",
+      "invalid_auth": "Dane logowania Circle zostały odrzucone.",
+      "no_devices": "Nie znaleziono zegarków dla tego konta.",
+      "unknown": "Nieoczekiwana odpowiedź myFirst Circle."
+    },
+    "step": {
+      "user": {
+        "data": {"phone": "Numer telefonu", "password": "Hasło"},
+        "data_description": {
+          "phone": "Międzynarodowy numer telefonu konta Circle wraz z numerem kierunkowym kraju.",
+          "password": "Hasło konta Circle. Jest używane jednorazowo do logowania i nie jest zapisywane przez Home Assistant."
+        },
+        "description": "Zaloguj się bezpośrednio na konto myFirst Circle. Home Assistant zapisuje tylko wynikową odnawialną sesję, bez numeru telefonu i hasła.",
+        "title": "Połącz myFirst Circle"
+      },
+      "reauth_confirm": {
+        "data": {"phone": "Numer telefonu", "password": "Hasło"},
+        "data_description": {
+          "phone": "Międzynarodowy numer telefonu skonfigurowanego konta Circle wraz z numerem kierunkowym kraju.",
+          "password": "Hasło konta Circle. Jest używane jednorazowo do odnowienia sesji i nie jest zapisywane przez Home Assistant."
+        },
+        "description": "Sesja myFirst Circle wygasła. Zaloguj się ponownie na to samo konto, aby ją odnowić.",
+        "title": "Odnów sesję myFirst Circle"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "Bateria"}
+    }
+  }
+}

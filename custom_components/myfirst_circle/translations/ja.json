@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "このmyFirst Circleアカウントはすでに設定されています。",
+      "reauth_successful": "myFirst Circleセッションを更新しました。",
+      "wrong_account": "この認証情報は別のmyFirst Circleアカウントのものです。"
+    },
+    "error": {
+      "cannot_connect": "myFirst Circleに接続できません。",
+      "invalid_auth": "Circleの認証情報が拒否されました。",
+      "no_devices": "このアカウントに登録された時計が見つかりません。",
+      "unknown": "myFirst Circleから予期しない応答が返されました。"
+    },
+    "step": {
+      "user": {
+        "data": {"phone": "電話番号", "password": "パスワード"},
+        "data_description": {
+          "phone": "国番号を含むCircleアカウントの国際電話番号。",
+          "password": "Circleアカウントのパスワード。サインイン時に一度だけ使用され、Home Assistantには保存されません。"
+        },
+        "description": "myFirst Circleアカウントで直接サインインします。Home Assistantは発行された更新可能なセッションのみを保存し、電話番号とパスワードは保存しません。",
+        "title": "myFirst Circleに接続"
+      },
+      "reauth_confirm": {
+        "data": {"phone": "電話番号", "password": "パスワード"},
+        "data_description": {
+          "phone": "国番号を含む、設定済みCircleアカウントの国際電話番号。",
+          "password": "Circleアカウントのパスワード。セッション更新時に一度だけ使用され、Home Assistantには保存されません。"
+        },
+        "description": "myFirst Circleセッションの有効期限が切れました。同じアカウントで再度サインインしてください。",
+        "title": "myFirst Circleセッションを更新"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "バッテリー"}
+    }
+  }
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.zip
+
+# Never commit captured traffic or credentials.
+*.pcap
+*.pcapng
+.env
+secrets*.json
+credentials*.json

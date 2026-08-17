@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Questo account myFirst Circle è già configurato.",
+      "reauth_successful": "La sessione myFirst Circle è stata rinnovata.",
+      "wrong_account": "Queste credenziali appartengono a un altro account myFirst Circle."
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi a myFirst Circle.",
+      "invalid_auth": "Le credenziali Circle sono state rifiutate.",
+      "no_devices": "Non sono stati trovati orologi per questo account.",
+      "unknown": "Risposta imprevista da myFirst Circle."
+    },
+    "step": {
+      "user": {
+        "data": {"phone": "Numero di telefono", "password": "Password"},
+        "data_description": {
+          "phone": "Il numero internazionale usato per l'account Circle, incluso il prefisso internazionale.",
+          "password": "La password dell'account Circle. Viene usata una sola volta per l'accesso e non viene salvata da Home Assistant."
+        },
+        "description": "Accedi direttamente con un account myFirst Circle. Home Assistant salva solo la sessione rinnovabile risultante, non il numero di telefono o la password.",
+        "title": "Connetti myFirst Circle"
+      },
+      "reauth_confirm": {
+        "data": {"phone": "Numero di telefono", "password": "Password"},
+        "data_description": {
+          "phone": "Il numero internazionale dell'account Circle configurato, incluso il prefisso internazionale.",
+          "password": "La password dell'account Circle. Viene usata una sola volta per rinnovare la sessione e non viene salvata da Home Assistant."
+        },
+        "description": "La sessione myFirst Circle è scaduta. Accedi di nuovo con lo stesso account per rinnovarla.",
+        "title": "Rinnova la sessione myFirst Circle"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "Batteria"}
+    }
+  }
+}

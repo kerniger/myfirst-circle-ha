@@ -1,0 +1,46 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Dieses myFirst-Circle-Konto ist bereits eingerichtet.",
+      "reauth_successful": "Die myFirst-Circle-Sitzung wurde erfolgreich erneuert.",
+      "wrong_account": "Diese Zugangsdaten gehören zu einem anderen myFirst-Circle-Konto."
+    },
+    "error": {
+      "cannot_connect": "Verbindung zu myFirst Circle fehlgeschlagen.",
+      "invalid_auth": "Die Circle-Zugangsdaten wurden abgelehnt.",
+      "no_devices": "Für dieses Konto wurden keine Uhren gefunden.",
+      "unknown": "Unerwartete Antwort von myFirst Circle."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "phone": "Telefonnummer",
+          "password": "Passwort"
+        },
+        "data_description": {
+          "phone": "Die internationale Telefonnummer des Circle-Kontos einschließlich Ländervorwahl.",
+          "password": "Das Passwort des Circle-Kontos. Es wird einmalig zur Anmeldung verwendet und nicht in Home Assistant gespeichert."
+        },
+        "description": "Direkte Anmeldung mit einem myFirst-Circle-Konto. Home Assistant speichert nur die anschließend erneuerbare Sitzung, nicht Telefonnummer oder Passwort.",
+        "title": "myFirst Circle verbinden"
+      },
+      "reauth_confirm": {
+        "data": {
+          "phone": "Telefonnummer",
+          "password": "Passwort"
+        },
+        "data_description": {
+          "phone": "Die internationale Telefonnummer des eingerichteten Circle-Kontos einschließlich Ländervorwahl.",
+          "password": "Das Passwort des Circle-Kontos. Es wird einmalig zur Erneuerung verwendet und nicht in Home Assistant gespeichert."
+        },
+        "description": "Die myFirst-Circle-Sitzung ist abgelaufen. Melde dich erneut mit demselben Konto an, um sie zu erneuern.",
+        "title": "myFirst-Circle-Sitzung erneuern"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "Akku"}
+    }
+  }
+}

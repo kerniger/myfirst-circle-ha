@@ -1,0 +1,12 @@
+{
+  "domain": "myfirst_circle",
+  "name": "myFirst Circle",
+  "codeowners": ["@kerniger"],
+  "config_flow": true,
+  "documentation": "https://github.com/kerniger/myfirst-circle-ha",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/kerniger/myfirst-circle-ha/issues",
+  "requirements": [],
+  "version": "0.3.0"
+}

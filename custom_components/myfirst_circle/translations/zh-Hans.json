@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "此 myFirst Circle 账户已配置。",
+      "reauth_successful": "myFirst Circle 会话已成功续期。",
+      "wrong_account": "这些凭据属于另一个 myFirst Circle 账户。"
+    },
+    "error": {
+      "cannot_connect": "无法连接到 myFirst Circle。",
+      "invalid_auth": "Circle 拒绝了这些凭据。",
+      "no_devices": "此账户下未找到手表。",
+      "unknown": "myFirst Circle 返回了意外响应。"
+    },
+    "step": {
+      "user": {
+        "data": {"phone": "电话号码", "password": "密码"},
+        "data_description": {
+          "phone": "Circle 账户使用的国际电话号码，包括国家/地区代码。",
+          "password": "Circle 账户密码。仅用于一次登录，不会由 Home Assistant 保存。"
+        },
+        "description": "直接登录 myFirst Circle 账户。Home Assistant 仅保存登录后可续期的会话，不保存电话号码或密码。",
+        "title": "连接 myFirst Circle"
+      },
+      "reauth_confirm": {
+        "data": {"phone": "电话号码", "password": "密码"},
+        "data_description": {
+          "phone": "已配置 Circle 账户的国际电话号码，包括国家/地区代码。",
+          "password": "Circle 账户密码。仅用于一次会话续期，不会由 Home Assistant 保存。"
+        },
+        "description": "myFirst Circle 会话已过期。请使用同一账户重新登录以续期。",
+        "title": "续期 myFirst Circle 会话"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "电池"}
+    }
+  }
+}

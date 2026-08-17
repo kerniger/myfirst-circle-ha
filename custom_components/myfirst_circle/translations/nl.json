@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Dit myFirst Circle-account is al geconfigureerd.",
+      "reauth_successful": "De myFirst Circle-sessie is vernieuwd.",
+      "wrong_account": "Deze aanmeldgegevens horen bij een ander myFirst Circle-account."
+    },
+    "error": {
+      "cannot_connect": "Kan geen verbinding maken met myFirst Circle.",
+      "invalid_auth": "De Circle-aanmeldgegevens zijn geweigerd.",
+      "no_devices": "Er zijn geen horloges gevonden voor dit account.",
+      "unknown": "Onverwacht antwoord van myFirst Circle."
+    },
+    "step": {
+      "user": {
+        "data": {"phone": "Telefoonnummer", "password": "Wachtwoord"},
+        "data_description": {
+          "phone": "Het internationale telefoonnummer van het Circle-account, inclusief landcode.",
+          "password": "Het wachtwoord van het Circle-account. Het wordt eenmalig gebruikt om aan te melden en niet door Home Assistant opgeslagen."
+        },
+        "description": "Meld rechtstreeks aan met een myFirst Circle-account. Home Assistant slaat alleen de verkregen vernieuwbare sessie op, niet het telefoonnummer of wachtwoord.",
+        "title": "myFirst Circle verbinden"
+      },
+      "reauth_confirm": {
+        "data": {"phone": "Telefoonnummer", "password": "Wachtwoord"},
+        "data_description": {
+          "phone": "Het internationale telefoonnummer van het geconfigureerde Circle-account, inclusief landcode.",
+          "password": "Het wachtwoord van het Circle-account. Het wordt eenmalig gebruikt om de sessie te vernieuwen en niet door Home Assistant opgeslagen."
+        },
+        "description": "De myFirst Circle-sessie is verlopen. Meld opnieuw aan met hetzelfde account om deze te vernieuwen.",
+        "title": "myFirst Circle-sessie vernieuwen"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "Batterij"}
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This myFirst Circle account is already configured.",
+      "reauth_successful": "The myFirst Circle session was renewed successfully.",
+      "wrong_account": "These credentials belong to a different myFirst Circle account."
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to myFirst Circle.",
+      "invalid_auth": "The Circle credentials were rejected.",
+      "no_devices": "No watches were found for this account.",
+      "unknown": "Unexpected response from myFirst Circle."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "phone": "Phone number",
+          "password": "Password"
+        },
+        "data_description": {
+          "phone": "The international phone number used for the Circle account, including country code.",
+          "password": "The Circle account password. It is used once to sign in and is not stored by Home Assistant."
+        },
+        "description": "Sign in directly with a myFirst Circle account. Home Assistant stores only the resulting renewable session, not the phone number or password.",
+        "title": "Connect myFirst Circle"
+      },
+      "reauth_confirm": {
+        "data": {
+          "phone": "Phone number",
+          "password": "Password"
+        },
+        "data_description": {
+          "phone": "The international phone number used for the configured Circle account, including country code.",
+          "password": "The Circle account password. It is used once to renew the session and is not stored by Home Assistant."
+        },
+        "description": "The myFirst Circle session has expired. Sign in again with the same account to renew it.",
+        "title": "Renew myFirst Circle session"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {"name": "Battery"}
+    }
+  }
+}
