@@ -32,7 +32,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "Er is onlangs een nieuwe locatie aangevraagd. Probeer het over {seconds} seconden opnieuw."
+    },
+    "refresh_failed": {
+      "message": "Er kon geen nieuwe locatie bij myFirst Circle worden aangevraagd."
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "Locatie vernieuwen"}
+    },
     "sensor": {
       "battery": {"name": "Batterij"}
     }

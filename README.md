@@ -9,6 +9,7 @@ battery level of watches linked to a myFirst Circle account.
 - No Android app, tablet, copied token, or manual API setup required
 - One GPS `device_tracker` per linked watch
 - One diagnostic battery sensor per linked watch
+- One button per linked watch to request a fresh location on demand
 - Automatic session renewal and a UI reauthentication flow
 - Three-minute passive cloud polling without requesting a new GPS fix
 - Stable hashed Home Assistant identifiers instead of watch IMEIs
@@ -55,12 +56,14 @@ For each visible watch, the integration creates:
 
 - a GPS `device_tracker` with the latest coordinates returned by the Circle
   cloud; and
-- a diagnostic battery sensor.
+- a diagnostic battery sensor; and
+- a **Refresh location** button that actively asks the watch for a new fix.
 
 The integration reads the already available cloud location every three
-minutes. It does not actively ask the watch for a fresh GPS position, avoiding
-additional watch battery use. Consequently, the location timestamp may be
-older than the Home Assistant poll time.
+minutes. Passive polling does not ask the watch for a fresh GPS position.
+Pressing **Refresh location** sends the same on-demand request as the Circle
+app and performs a follow-up cloud poll after 15 seconds. Active requests may
+increase watch battery use, so the button has a 60-second per-watch cooldown.
 
 ## Privacy and security
 
@@ -84,8 +87,7 @@ a public issue.
 - This integration relies on an undocumented private cloud API. The vendor can
   change or disable it without notice.
 - Phone/password login is supported. Social sign-in methods are not supported.
-- The integration is read-only and does not expose history, safe-zone editing,
-  tracking mode, or an active location refresh.
+- The integration does not expose history, safe-zone editing, or tracking mode.
 - A watch must already be linked and visible to the account used during setup.
 
 ## Support and development

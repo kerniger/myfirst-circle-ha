@@ -18,5 +18,11 @@ CLIENT_PREFIX_LENGTH = 18
 
 DEFAULT_BASE_URL = "https://socialcircle.app"
 DEFAULT_SCAN_INTERVAL = timedelta(minutes=3)
+LOCATION_REFRESH_COOLDOWN = timedelta(seconds=60)
+LOCATION_REFRESH_DELAY = timedelta(seconds=15)
 
-PLATFORMS: list[Platform] = [Platform.DEVICE_TRACKER, Platform.SENSOR]
+PLATFORMS: list[Platform] = [
+    Platform.BUTTON,
+    Platform.DEVICE_TRACKER,
+    Platform.SENSOR,
+]

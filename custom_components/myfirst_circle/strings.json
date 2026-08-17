@@ -38,7 +38,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "A new location was requested recently. Try again in {seconds} seconds."
+    },
+    "refresh_failed": {
+      "message": "Unable to request a new location from myFirst Circle."
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "Refresh location"}
+    },
     "sensor": {
       "battery": {"name": "Battery"}
     }

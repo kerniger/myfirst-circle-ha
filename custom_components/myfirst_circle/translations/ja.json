@@ -32,7 +32,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "新しい位置情報は最近リクエストされました。{seconds}秒後にもう一度お試しください。"
+    },
+    "refresh_failed": {
+      "message": "myFirst Circleに新しい位置情報をリクエストできませんでした。"
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "位置情報を更新"}
+    },
     "sensor": {
       "battery": {"name": "バッテリー"}
     }

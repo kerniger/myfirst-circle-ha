@@ -71,6 +71,23 @@ class CircleModelTests(unittest.TestCase):
         self.assertEqual(devices[0].user_token, "child-token")
         self.assertEqual(devices[0].child_name, "Kid")
 
+    def test_build_location_refresh_payload(self) -> None:
+        device = models.CircleDevice(
+            imei="device-id",
+            user_token="child-token",
+            child_name="Kid",
+        )
+        self.assertEqual(
+            models.build_location_refresh_payload(device, 1_700_000_000_000),
+            {
+                "devicetype": "WATCH",
+                "imei": "device-id",
+                "langID": "en",
+                "refreshlocation": "1700000000000",
+                "token": "child-token",
+            },
+        )
+
     def test_parse_device_info(self) -> None:
         now = datetime.now(UTC)
         info = models.parse_device_info(

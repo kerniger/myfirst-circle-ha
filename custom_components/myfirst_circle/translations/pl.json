@@ -32,7 +32,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "Niedawno zażądano nowej lokalizacji. Spróbuj ponownie za {seconds} s."
+    },
+    "refresh_failed": {
+      "message": "Nie udało się zażądać nowej lokalizacji z myFirst Circle."
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "Odśwież lokalizację"}
+    },
     "sensor": {
       "battery": {"name": "Bateria"}
     }

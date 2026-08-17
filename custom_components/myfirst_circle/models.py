@@ -64,6 +64,19 @@ class CircleSession:
     user_token: str
 
 
+def build_location_refresh_payload(
+    device: CircleDevice, requested_at_ms: int
+) -> dict[str, str]:
+    """Build the active-location payload used by the Circle Android app."""
+    return {
+        "devicetype": "WATCH",
+        "imei": device.imei,
+        "langID": "en",
+        "refreshlocation": str(requested_at_ms),
+        "token": device.user_token,
+    }
+
+
 def _response_data(payload: Any) -> Any:
     if not isinstance(payload, dict):
         raise CirclePayloadError("Circle response is not an object")

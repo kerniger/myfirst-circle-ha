@@ -32,7 +32,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "Une nouvelle position a été demandée récemment. Réessayez dans {seconds} secondes."
+    },
+    "refresh_failed": {
+      "message": "Impossible de demander une nouvelle position à myFirst Circle."
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "Actualiser la position"}
+    },
     "sensor": {
       "battery": {"name": "Batterie"}
     }

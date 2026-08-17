@@ -38,7 +38,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "Ein neuer Standort wurde erst kürzlich angefordert. Versuche es in {seconds} Sekunden erneut."
+    },
+    "refresh_failed": {
+      "message": "Ein neuer Standort konnte nicht von myFirst Circle angefordert werden."
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "Standort aktualisieren"}
+    },
     "sensor": {
       "battery": {"name": "Akku"}
     }

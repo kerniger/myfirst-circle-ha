@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here.
 
+## 0.4.0 — 2026-08-17
+
+- Add a translated per-watch button for requesting a fresh location.
+- Reproduce the Circle app's active-location request without requiring the app.
+- Poll the cloud 15 seconds after a request to pick up the new watch position.
+- Add a 60-second per-watch cooldown to limit accidental battery drain.
+
 ## 0.3.0 — 2026-08-17
 
 - Add complete first-time phone/password login without an existing app session.

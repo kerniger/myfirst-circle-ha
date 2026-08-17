@@ -32,7 +32,18 @@
       }
     }
   },
+  "exceptions": {
+    "refresh_cooldown": {
+      "message": "最近已请求过新位置。请在 {seconds} 秒后重试。"
+    },
+    "refresh_failed": {
+      "message": "无法向 myFirst Circle 请求新位置。"
+    }
+  },
   "entity": {
+    "button": {
+      "refresh_location": {"name": "刷新位置"}
+    },
     "sensor": {
       "battery": {"name": "电池"}
     }

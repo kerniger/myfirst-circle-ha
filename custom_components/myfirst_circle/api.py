@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import hashlib
+import time
 from collections.abc import Callable
 from datetime import UTC, datetime
 from typing import Any
@@ -17,6 +18,7 @@ from .models import (
     CircleDeviceInfo,
     CirclePayloadError,
     CircleSession,
+    build_location_refresh_payload,
     parse_children,
     parse_device_info,
     parse_devices,
@@ -37,7 +39,7 @@ class CircleConnectionError(CircleApiError):
 
 
 class CircleApiClient:
-    """Small read-only client for the endpoints used by the integration."""
+    """Small client for the endpoints used by the integration."""
 
     def __init__(
         self,
@@ -91,7 +93,7 @@ class CircleApiClient:
             "Accept": "application/json",
             "Authorization": self._authorization,
             "Content-Type": "application/json",
-            "User-Agent": "myFirst Circle Home Assistant/0.3",
+            "User-Agent": "myFirst Circle Home Assistant/0.4",
         }
         try:
             async with self._session.request(
@@ -267,3 +269,13 @@ class CircleApiClient:
             return parse_device_info(payload, retrieved_at=datetime.now(UTC))
         except CirclePayloadError as err:
             raise CircleApiError(str(err)) from err
+
+    async def async_request_location(self, device: CircleDevice) -> None:
+        """Ask a watch for a fresh location using the Android app protocol."""
+        await self._request(
+            "PUT",
+            "/v2/api/device/",
+            json_data=build_location_refresh_payload(
+                device, time.time_ns() // 1_000_000
+            ),
+        )
